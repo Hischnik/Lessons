@@ -8,3 +8,5 @@ puts "Текущие обороты: #{car.current_rpm}"
 truck = Truck_2.new
 truck.start_engine
 puts "Текущие обороты: #{truck.current_rpm}"
+
+# Тест
