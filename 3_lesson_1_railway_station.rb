@@ -45,14 +45,3 @@ class RailwayStation
   end
 
 end
-
-class Train
-
-  attr_accessor :type, :count_carriage
-
-  def initialize(type, count_carriage = 0)
-    @type = type
-    @count_carriage = count_carriage
-  end
-
-end
