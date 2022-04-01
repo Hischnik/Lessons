@@ -4,9 +4,28 @@ class RailwayStation
 
   attr_reader :trains
 
+  require_relative "3_lesson_moduls" # т.е. сначала подгружаем фаил с модулем а потом
+  include DopResurces # подгружаем сам модуль
+
+  @@all_station = []
+
   def initialize(name_station)
     @name_station = name_station
     @trains = []
+    @@all_station << self # т.е. запихнули сам экземпляр класса в переменную класса, в данном случае в массив
+    self.class.add_count_instance
+  end
+
+  def self.show_all_station
+    # puts @@all_station.inspect # это просто выведет массив экземпляров
+    # а выведем ка все имена =)
+    @@all_station.each do |station|
+      puts "Станция: #{station.name_station}"
+    end
+  end
+
+  def self.find_station(numb)
+    @@all_station[numb-1]
   end
 
   def add_train(train)

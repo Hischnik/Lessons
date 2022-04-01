@@ -1,5 +1,9 @@
 class Train
 
+  require_relative "3_lesson_moduls" # т.е. сначала подгружаем фаил с модулем
+
+  include DopResurces # а потом подгружаем сам модуль
+
   attr_accessor :type, :speed
   attr_reader :count_carriage, :train_rout
 
@@ -7,7 +11,6 @@ class Train
     @type = type
     @count_carriage = count_carriage
     @speed = 0
-    # @train_rout = {}
   end
 
   def stop
