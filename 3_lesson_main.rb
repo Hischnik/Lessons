@@ -25,16 +25,19 @@ while str != "stop" do
 
   elsif str == "3"
 
-    puts "Создание поезда\n" + "Введите тип поезда:"
+
+    puts "Создание поезда\n" + "Введите название поезда:"
+    name = gets.chomp
+    puts "Введите тип поезда:"
     type = gets.chomp
     puts "Сколько вагонов?"
     count_carriage = gets.chomp.to_i
-    trains << Train.new(type,count_carriage)
+    trains << Train.new(name, type,count_carriage)
 
   elsif str == "4"
 
     trains.each do |train|
-      puts train.type
+      puts "#{train.name_train} - #{train.type}"
     end
 
   elsif str == "5"
@@ -46,7 +49,7 @@ while str != "stop" do
 
       trains.each do |train|
         numb += 1
-        puts "#{numb} - #{train.type} кол-во вагонов: #{train.count_carriage}"
+        puts "#{numb} - #{train.name_train} #{train.type} кол-во вагонов: #{train.count_carriage}"
       end
 
       puts "Введите номер поезда:"
