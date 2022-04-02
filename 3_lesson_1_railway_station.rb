@@ -32,6 +32,12 @@ class RailwayStation
     @trains << train
   end
 
+  def rename_trains(&block)
+    @trains.each do |train|
+      block.call(train)
+    end
+  end
+
   def show_trains
     trains.each do |train|
       puts "Тип: #{train.type}, кол-во вагонов: #{train.count_carriage}"
