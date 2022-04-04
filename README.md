@@ -23,3 +23,6 @@
 
 7_lesson
 Блоки, Proc и lambda. Чтение файлов
+
+8_lesson
+Идиомы
