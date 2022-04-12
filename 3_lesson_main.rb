@@ -25,7 +25,6 @@ while str != "stop" do
 
   elsif str == "3"
 
-
     puts "Создание поезда\n" + "Введите название поезда:"
     name = gets.chomp
     puts "Введите тип поезда:"
